@@ -72,3 +72,19 @@ end γ
 
 end diracRepresentation
 end spaceTime
+
+namespace CliffordAlgebraDiracAlgebra
+
+open scoped spaceTime.γ
+
+instance : Semiring diracAlgebra := sorry
+
+def Q : QuadraticForm ℝ (Matrix (Fin 4) (Fin 4) ℂ) := sorry
+
+instance : Algebra ℝ (CliffordAlgebra Q) := sorry
+
+instance : Algebra ℝ diracAlgebra := sorry
+
+def equiv : CliffordAlgebra Q ≃ₐ[ℝ] diracAlgebra := sorry
+
+end CliffordAlgebraDiracAlgebra
